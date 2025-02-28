@@ -11,7 +11,12 @@ class Book
     }
 
     static remove = (id) => {
-        return Book._books.has(id) ? Book._books.delete(id) : null;
+        const book = Book._books.get(id);
+        if(!book)
+            return null;
+
+        Book._books.delete(id)
+        return book;
     }
 }
 
