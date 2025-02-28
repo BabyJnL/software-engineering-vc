@@ -1,0 +1,15 @@
+{
+  "name": "versioning",
+  "version": "1.0.0",
+  "description": "A project that aims to learn about versioning with Git",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js"
+  },
+  "author": "Ariya Panna",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
