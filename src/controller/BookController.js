@@ -7,6 +7,11 @@ class BookController
         return books.length > 0 ? res.status(200).json({ message: 'Books found', data: books }) : res.status(404).json({ message: 'No books found' });
     }
 
+    static show = (req, res) => {
+        const book = Book.searchByTitle(req.params.title);
+        return book.length > 0 ? res.status(200).json({ message: 'Book found', data: book }) : res.status(404).json({ message: 'Book not found' });
+    }
+
     static create = (req, res) => {
         const book = Book.add(req.body);
         res.status(201).json({ message: 'Book created', data: book});
