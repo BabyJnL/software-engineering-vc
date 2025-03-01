@@ -5,6 +5,10 @@ class Book
 
     static list = () => [...Book._books.values()];
 
+    static searchByTitle = (title) => {
+        return [...Book._books.values()].filter(book => book.title === title);
+    }
+
     static add = (book) => {
         Book._books.set(++Book._id, { id: Book._id, ...book });
         return Book._books.get(Book._id);
