@@ -17,6 +17,11 @@ class BookController
         res.status(201).json({ message: 'Book created', data: book});
     }
 
+    static edit = (req, res) => {
+        const book = Book.edit(+req.params.id, req.body);
+        return !book ? res.status(404).json({ message: 'Book not found' }) : res.status(200).json({ message: 'Book updated', data: book });
+    }
+
     static delete = (req, res) => {
         const book = Book.remove(+req.params.id);
         return !book ? res.status(404).json({ message: 'Book not found' }) : res.status(200).json({ message: 'Book deleted', data: book});

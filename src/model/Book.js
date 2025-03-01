@@ -14,6 +14,15 @@ class Book
         return Book._books.get(Book._id);
     }
 
+    static edit = (id, book) => {
+        const oldBook = Book._books.get(id);
+        if(!oldBook)
+            return null;
+
+        Book._books.set(id, { id, ...book });
+        return Book._books.get(id);
+    }
+
     static remove = (id) => {
         const book = Book._books.get(id);
         if(!book)
