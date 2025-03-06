@@ -4,7 +4,9 @@ A This repository is addressed to Software Engineering lecture where I learn how
 
 ## Commit Message Icon
 > ➕ feat: a new feature is introduced with the changes
+> 
 > 🛠️ fix: a bug fix has occurred
+> 
 > 📚 chore: changes that do not relate to a fix or feature and don't modify src or test files (for example updating dependencies)
 
 ## How To Run
